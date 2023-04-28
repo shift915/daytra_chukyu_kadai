@@ -137,11 +137,12 @@ body {
     bottom: 0;
     background-color: #fff;
     z-index: 300;
-    transition: transform 0.4s;
+ 
     transform: translateX(105%);
   }
   .header__nav.is-show {
     transform: translateX(0);
+    transition: transform 0.4s;
   }
 }
 
