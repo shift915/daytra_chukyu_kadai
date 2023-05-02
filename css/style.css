@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @media (max-width: 767px) {
   .is-pc {
     display: none;
@@ -137,12 +137,11 @@ body {
     bottom: 0;
     background-color: #fff;
     z-index: 300;
- 
     transform: translateX(105%);
   }
   .header__nav.is-show {
-    transform: translateX(0);
     transition: transform 0.4s;
+    transform: translateX(0);
   }
 }
 
@@ -177,6 +176,7 @@ body {
   letter-spacing: -0.02em;
   padding-bottom: 5.5px;
   position: relative;
+  font-weight: 500;
 }
 @media (max-width: 767px) {
   .header__nav-link {
@@ -285,14 +285,14 @@ body {
 
 @media (min-width: 768px) {
   .main-visual {
-    background: url(https://shift915.github.io/daytra_chukyu_kadai/image/mv2x.png) center center/cover;
+    background: url(/image/mv2x.png) center center/cover;
     padding: 230px 40px 152px 40px;
     box-sizing: content-box;
   }
 }
 @media (max-width: 767px) {
   .main-visual {
-    background: url(https://shift915.github.io/daytra_chukyu_kadai//image/mv.png) left 22% center/cover;
+    background: url(/image/mv.png) left 22% center/cover;
     padding: 222px 16px 230px 16px;
   }
 }
@@ -385,7 +385,7 @@ body {
 }
 @media (max-width: 767px) {
   .news__inner {
-    padding: 44px 16px 40px;
+    padding: 44px 0 40px;
     position: relative;
     top: -40px;
   }
@@ -409,8 +409,16 @@ body {
   }
 }
 
-.news__item-link {
+.news__item {
   border-bottom: 1px solid #CECDCD;
+}
+@media (max-width: 767px) {
+  .news__item {
+    padding: 0 16px;
+  }
+}
+
+.news__item-link {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -433,7 +441,7 @@ body {
   content: "";
   height: 26px;
   width: 14px;
-  background: no-repeat url(https://shift915.github.io/daytra_chukyu_kadai//image/news-arrow.png) center center/contain;
+  background: no-repeat url(/image/news-arrow.png) center center/contain;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -940,7 +948,7 @@ body {
 }
 
 .qa {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai//image/qa-bg.png) center top/cover fixed;
+  background: url(/image/qa-bg.png) center top/cover fixed;
   padding: 64px 40px 120px;
 }
 @media (max-width: 767px) {
@@ -1008,6 +1016,7 @@ body {
 .qa__item-q-icon {
   color: #fff;
   line-height: 24px;
+  font-weight: 600;
 }
 
 .qa__item-q-text {
@@ -1023,10 +1032,9 @@ body {
   position: relative;
   height: 15px;
   margin-left: 8px;
-  box-sizing: content-box;
 }
 .qa__item-q-part-wrap.is-open .qa__item-q-part2 {
-  transform: rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .qa__item-q-part1 {
@@ -1042,13 +1050,13 @@ body {
 
 .qa__item-q-part2 {
   width: 3px;
-  height: 100%;
+  height: 15px;
   background-color: #3B69FF;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: block;
+  display: inline-block;
   transition: transform 0.4s;
 }
 
@@ -1194,7 +1202,7 @@ body {
 }
 
 .contact {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai/image/contact-bg.png) center center/cover;
+  background: url(/image/contact-bg.png) center center/cover;
   padding: 60px 16px;
 }
 @media (max-width: 767px) {
@@ -1209,7 +1217,7 @@ body {
 }
 
 .contact__header {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai//image/contact1.png) center center/cover;
+  background: url(/image/contact1.png) center center/cover;
   padding: 62px 0;
   color: #fff;
   text-align: center;
@@ -1278,13 +1286,8 @@ body {
 
 .contact__label {
   flex: 0 0 130px;
+  font-weight: bold;
 }
-@media (min-width: 768px) {
-  .contact__label {
-    font-weight: bold;
-  }
-}
-
 .contact__input {
   position: relative;
 }
@@ -1318,6 +1321,7 @@ select, input[type=text], input[type=email], textarea {
 }
 
 select {
+  color: #3e3e3e;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1359,7 +1363,7 @@ select:hover, select:focus {
   border-right: 2px solid #3e3e3e;
   border-bottom: 2px solid #3e3e3e;
   right: 12px;
-  top: 12px;
+  top: 14.5px;
   transform: rotate(45deg);
   display: inline-block;
 }
@@ -1368,7 +1372,12 @@ input[type=text], input[type=email] {
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(62, 62, 62, 0.5);
-  padding: 4px 0;
+  padding: 4px 12px;
+}
+@media (max-width: 767px) {
+  input[type=text], input[type=email] {
+    padding: 4px 0px;
+  }
 }
 
 input[type=text]:focus, input[type=text]:hover, input[type=email]:focus, input[type=email]:hover {
@@ -1495,7 +1504,7 @@ textarea:focus, textarea:hover {
 }
 
 .contact__privacy {
-  margin-top: 36px;
+  margin-top: 38px;
 }
 @media (max-width: 767px) {
   .contact__privacy {

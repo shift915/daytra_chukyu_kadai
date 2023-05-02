@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 
 $font-color: #3e3e3e;
@@ -148,9 +148,9 @@ body {
     bottom: 0;
     background-color: #fff;
     z-index: 300;
-    transition: transform 0.4s;
     transform: translateX(105%);
     &.is-show {
+      transition: transform 0.4s;
       transform: translateX(0);
     }
   }
@@ -184,6 +184,7 @@ body {
   letter-spacing: -0.02em;
   padding-bottom: 5.5px;
   position: relative;
+  font-weight: 500;
 
   @include mq('sm') {
     font-size: 18px;
@@ -260,18 +261,20 @@ body {
   top: 16px;
 }
 .header__overlay {
-  position: fixed;
-  display: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 299;
-  background-color: $font-color;
-  opacity: 0.7;
-
-  &.is-show {
-    display: block;
+  @include mq('sm') {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 299;
+    background-color: $font-color;
+    opacity: 0.7;
+  
+    &.is-show {
+      display: block;
+    }
   }
 }
 
@@ -356,7 +359,7 @@ body {
   background-color: #fff;
   box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
   @include mq('sm') {
-    padding: 44px 16px 40px;
+    padding: 44px 0 40px;
     position: relative;
     top: -40px;
   }
@@ -374,15 +377,20 @@ body {
     padding-bottom: 43px;
   }
 }
+.news__item {
+  @include mq('sm') {
+    padding: 0 16px;
+  }
+  border-bottom: 1px solid #CECDCD;
+}
 
 .news__item-link {
-  border-bottom: 1px solid #CECDCD;
   display: inline-block;
   position: relative;
-  width: 100%;
+  width:  100%;
   display: flex;
   align-items: center;
-
+  
   @include mq('md') {
     padding: 38px 0;
     justify-content: center;
@@ -879,6 +887,7 @@ body {
 .qa__item-q-icon {
   color: #fff;
   line-height: 24px;
+  font-weight: 600;
 }
 
 
@@ -891,15 +900,17 @@ body {
 
 .qa__item-q-part-wrap {
   flex: 0 0 15px;
+  // width: 15px;
   display: inline-block;
   position: relative;
   height: 15px;
   margin-left: 8px;
-  box-sizing: content-box;
+  // border: 1px solid green;
+  // box-sizing: content-box;
 
   &.is-open {
     .qa__item-q-part2 {
-      transform: rotate(90deg);
+      transform: translateX(-50%) rotate(90deg);
     }
   }
 }
@@ -916,13 +927,13 @@ body {
 }
 .qa__item-q-part2 {
   width: 3px;
-  height: 100%;
+  height: 15px;
   background-color: #3B69FF;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: block;
+  display: inline-block;
   transition: transform 0.4s;
 }
 
@@ -1118,8 +1129,8 @@ body {
 }
 .contact__label {
   flex: 0 0 130px;
+  font-weight: bold;
   @include mq('md') {
-    font-weight: bold;
   }
 }
 .contact__input {
@@ -1156,6 +1167,7 @@ select {
     width: 100%;
     margin-top: 2px;
   }
+  color :$font-color;
   appearance: none;
   transition: box-shadow 0.4s;
   border: 1px solid $font-color;
@@ -1183,7 +1195,7 @@ select {
     border-right: 2px solid $font-color;
     border-bottom: 2px solid $font-color;
     right: 12px;
-    top: 12px;
+    top: 14.5px;
     transform: rotate(45deg);
     display: inline-block;
   }
@@ -1193,7 +1205,10 @@ input[type="text"],input[type="email"] {
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(62, 62, 62, .5);
-  padding: 4px 0;
+  padding: 4px 12px;
+  @include mq('sm') {
+    padding: 4px 0px;
+  }
 }
 
 input[type="text"],input[type="email"] {
@@ -1324,7 +1339,7 @@ textarea {
 }
 
 .contact__privacy {
-  margin-top: 36px;
+  margin-top: 38px;
   @include mq('sm') {
     margin-top: 28px;
   }
