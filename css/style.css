@@ -285,7 +285,7 @@ body {
 
 @media (min-width: 768px) {
   .main-visual {
-    background: url(https://github.com/shift915/daytra_chukyu_kadai/blob/main/image/mv2x.png) center center/cover;
+    background: url(https://shift915.github.io/daytra_chukyu_kadai/mv2x.png) center center/cover;
     padding: 230px 40px 152px 40px;
     box-sizing: content-box;
   }
