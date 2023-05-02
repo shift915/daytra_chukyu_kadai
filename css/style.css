@@ -285,14 +285,14 @@ body {
 
 @media (min-width: 768px) {
   .main-visual {
-    background: url(https://shift915.github.io/daytra_chukyu_kadai/image/mv2x.png) center center/cover;
+    background: url(/image/mv2x.png) center center/cover;
     padding: 230px 40px 152px 40px;
     box-sizing: content-box;
   }
 }
 @media (max-width: 767px) {
   .main-visual {
-    background: url(https://shift915.github.io/daytra_chukyu_kadai/image/mv.png) left 22% center/cover;
+    background: url(/image/mv.png) left 22% center/cover;
     padding: 222px 16px 230px 16px;
   }
 }
@@ -441,7 +441,7 @@ body {
   content: "";
   height: 26px;
   width: 14px;
-  background: no-repeat url(https://shift915.github.io/daytra_chukyu_kadai/image/news-arrow.png) center center/contain;
+  background: no-repeat url(/image/news-arrow.png) center center/contain;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -948,7 +948,7 @@ body {
 }
 
 .qa {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai/image/qa-bg.png) center top/cover fixed;
+  background: url(/image/qa-bg.png) center top/cover fixed;
   padding: 64px 40px 120px;
 }
 @media (max-width: 767px) {
@@ -1202,7 +1202,7 @@ body {
 }
 
 .contact {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai/image/contact-bg.png) center center/cover;
+  background: url(/image/contact-bg.png) center center/cover;
   padding: 60px 16px;
 }
 @media (max-width: 767px) {
@@ -1217,7 +1217,7 @@ body {
 }
 
 .contact__header {
-  background: url(https://shift915.github.io/daytra_chukyu_kadai/image/contact1.png) center center/cover;
+  background: url(/image/contact1.png) center center/cover;
   padding: 62px 0;
   color: #fff;
   text-align: center;
@@ -1364,7 +1364,7 @@ select:hover, select:focus {
   border-bottom: 2px solid #3e3e3e;
   right: 12px;
   top: 14.5px;
-  transform: rotate(45deg);
+  transform: translateY(-75%) rotate(45deg);
   display: inline-block;
 }
 

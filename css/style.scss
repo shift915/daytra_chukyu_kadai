@@ -1196,7 +1196,7 @@ select {
     border-bottom: 2px solid $font-color;
     right: 12px;
     top: 14.5px;
-    transform: rotate(45deg);
+    transform: translateY(-75%) rotate(45deg);
     display: inline-block;
   }
 }
