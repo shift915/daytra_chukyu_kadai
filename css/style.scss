@@ -281,12 +281,12 @@ body {
 
 .main-visual {
   @include mq('md') {
-    background: url(/image/mv2x.png) center center / cover;
+    background: url("../image/mv2x.png") center center / cover;
     padding: 230px 40px 152px 40px;
     box-sizing: content-box;
   }
   @include mq('sm') {
-    background: url(/image/mv.png) left 22% center / cover;
+    background: url("../image/mv.png") left 22% center / cover;
     padding: 222px 16px 230px 16px;
   }
 }
@@ -410,7 +410,7 @@ body {
     @include mq('sm') {
       right: 0px;
     }
-    background: no-repeat url(/image/news-arrow.png) center center / contain;
+    background: no-repeat url("../image/news-arrow.png") center center / contain;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -829,7 +829,7 @@ body {
 
 
 .qa {
-  background: url(/image/qa-bg.png) center top / cover  fixed;
+  background: url("../image/qa-bg.png") center top / cover  fixed;
   padding: 64px 40px 120px;
   @include mq('sm') {
     padding: 44px 16px 60px;
@@ -1062,7 +1062,7 @@ body {
 }
 
 .contact {
-  background: url(/image/contact-bg.png) center center / cover;
+  background: url("../image/contact-bg.png") center center / cover;
   padding: 60px 16px;
   @include mq('sm') {
     padding: 40px 16px;
@@ -1074,7 +1074,7 @@ body {
   margin: 0 auto;
 }
 .contact__header {
-  background: url(/image/contact1.png) center center / cover;
+  background: url("../image/contact1.png") center center / cover;
   padding: 62px 0;
   color: #fff;
   text-align: center;
